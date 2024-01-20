@@ -1,0 +1,939 @@
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgba(33, 56, 66, 0.6);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1090px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.title {
+  color: #4d533c;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.link {
+  color: #d4d6d4;
+  border-bottom: 1px solid #d4d6d4;
+  padding-left: 10px;
+  position: relative;
+  transition: all 0.5s;
+  &:hover {
+    color: #ffd723;
+    border-bottom: 1px solid #ffd723;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 25%;
+    border: 5px solid transparent;
+    border-left: 5px solid #d4d6d4;
+    transition: all 0.5s;
+  }
+  &:hover::before {
+    border-left: 5px solid #ffd723;
+  }
+}
+
+.founder-card {
+  padding: 30px;
+  max-width: 455px;
+  background-color: #fff;
+  margin: -130px auto 0px;
+  z-index: 1;
+  position: relative;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  position: relative;
+  &__text {
+    width: 390px;
+    font-style: italic;
+    color: #4d533c;
+    margin-bottom: 25px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+  }
+  &__name {
+    color: #4d533c;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__position {
+    font-size: 14px;
+    color: #152934;
+  }
+}
+
+.menu__btn {
+  display: none;
+}
+
+.header {
+  margin-top: 24px;
+  z-index: 1;
+  &__logo {
+    z-index: 2;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__menu-item {
+    color: #c1b6b6;
+    padding: 0 3px 5px 3px;
+    transition: all 0.5s;
+    &:hover {
+      color: #ffd723;
+      border-bottom: 1px solid #ffd723;
+    }
+  }
+}
+
+.promo {
+  background-image: url("../images/promo-bg.png");
+  margin: -67px auto 0;
+  min-height: 811px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  &__content {
+    padding: 187px 0 108px;
+  }
+  &__title {
+    margin: 22px 0 24px;
+    font-size: 60px;
+    line-height: 74px;
+    font-weight: 700;
+    max-width: 560px;
+  }
+  &__text-before {
+    font-size: 14px;
+  }
+  &__text-after {
+    max-width: 580px;
+  }
+  &__link {
+    font-weight: 600;
+    color: #ffd723;
+    border-bottom: 1px solid #ffd723;
+    padding-left: 10px;
+    position: relative;
+    margin-top: 52px;
+    display: inline-block;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      top: 25%;
+      border: 5px solid transparent;
+      border-left: 5px solid #ffd723;
+    }
+  }
+}
+
+.about-us {
+  &__partners {
+    margin: -103px 0 0 auto;
+    max-width: 1276px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 50px 50px 100px 0px rgba(0, 0, 0, 0.15);
+  }
+  &__content {
+    padding: 120px 0 0;
+  }
+  &__title {
+    max-width: 470px;
+    margin: 30px 0 35px;
+    span {
+      background-color: rgba(255, 215, 35, 0.1);
+      padding: 0 5px;
+    }
+  }
+  &__text-before {
+    font-size: 14px;
+    color: rgba(77, 83, 60, 0.9);
+  }
+  &__text-after {
+    max-width: 510px;
+    margin-bottom: 40px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+    border-bottom: 1px solid rgba(33, 56, 66, 0.1);
+    gap: 0 10px;
+  }
+  &__box {
+    padding: 120px 45px 60px;
+    width: 440px;
+    background: #fff;
+    box-shadow: 0px 100px 100px 0px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+  }
+  &__box-text {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 50px;
+    font-style: italic;
+    color: #4d533c;
+  }
+  &__founder {
+    display: flex;
+    gap: 0 20px;
+  }
+  &__founder-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4d533c;
+    margin-bottom: 5px;
+  }
+  &__founder-position {
+    color: #152934;
+  }
+}
+
+.partners {
+  &__list {
+    display: flex;
+    gap: 0 66px;
+    align-items: center;
+    padding: 60px 166px 54px 65px;
+  }
+}
+
+.projects {
+  overflow-x: hidden;
+  padding-top: 150px;
+  &__title-box {
+    display: flex;
+    align-items: center;
+    gap: 0 130px;
+    margin-bottom: 100px;
+  }
+  &__title {
+    max-width: 355px;
+  }
+  &__title-text {
+    max-width: 520px;
+  }
+}
+
+.balenciaga,
+.model-3d,
+.booking {
+  margin-bottom: 100px;
+  &__box {
+    display: grid;
+    gap: 0 20px;
+    align-items: center;
+  }
+  &__text {
+    margin-top: 30px;
+  }
+  &__link {
+    margin-top: 90px;
+    display: inline-block;
+  }
+  &__img {
+    position: relative;
+  }
+}
+
+.balenciaga,
+.booking {
+  &__img {
+    right: 180px;
+  }
+
+  &__founder-card {
+    right: 250px;
+  }
+
+  &__box {
+    grid-template-columns: auto 475px;
+  }
+}
+
+.model-3d {
+  &__img {
+    left: 180px;
+  }
+  &__founder-card {
+    left: 260px;
+  }
+  &__box {
+    grid-template-columns: 475px auto;
+  }
+}
+
+.booking {
+  margin-bottom: 0;
+  padding-bottom: 150px;
+  border-bottom: 1px solid rgba(33, 56, 66, 0.1);
+}
+
+.services {
+  padding: 150px 0 360px;
+  &__title {
+    max-width: 600px;
+    margin-bottom: 90px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 90px;
+  }
+  &__name {
+    color: #4d533c;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  &__about-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+  }
+  &__about {
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 194px;
+    width: 100%;
+  }
+  &__link {
+    width: 100px;
+  }
+}
+
+.started {
+  background-color: #fafafa;
+  box-shadow: 50px 130px 100px 0px rgba(0, 0, 0, 0.15);
+  max-width: 1275px;
+  margin: -200px auto 0 0;
+  &__inner {
+    padding: 70px 0;
+  }
+  &__text {
+    color: #4d533c;
+    font-size: 60px;
+    line-height: 74px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  &__link {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-left: 15px;
+    &::before {
+      top: 22%;
+      border: 8px solid transparent;
+      border-left: 8px solid #d4d6d4;
+    }
+  }
+}
+
+.footer {
+  background-image: url("../images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__inner {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #5d6544;
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 100px;
+    padding-right: 100px;
+    border-right: 1px solid #5d6544;
+  }
+  &__menu-title,
+  &__social-title {
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  &__menu-item,
+  &__social-text {
+    color: #b6c197;
+    margin-bottom: 15px;
+  }
+  &__menu-item:last-child {
+    margin-bottom: 0;
+  }
+  &__social-mail {
+    display: block;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+  &__social-icons {
+    display: flex;
+    gap: 0 10px;
+  }
+  &__social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #444a34;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: #ffd723;
+      svg {
+        fill: #fff;
+
+        g {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__social-link {
+    &--facebook {
+      svg {
+        transform: translateY(13%);
+      }
+    }
+    &--twitter {
+      svg {
+        transform: translateY(20%);
+      }
+    }
+    &--google,
+    &--linkedin {
+      svg {
+        transform: translateY(10%);
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 30px;
+  }
+  &__copy {
+    font-size: 14px;
+    color: #b5c096;
+  }
+}
+
+.contacts {
+  display: flex;
+  gap: 0 130px;
+  padding: 120px 0 50px;
+  border-bottom: 1px solid #5d6544;
+  &__title {
+    color: #b6c197;
+    margin-bottom: 25px;
+  }
+  &__text {
+    color: #fff;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media(max-width: 1350px) {
+  .started {
+    max-width: 900px;
+  }
+}
+
+@media(max-width: 1100px) {
+  .partners {
+    &__list {
+      gap: 0 15px;
+      padding: 30px;
+      justify-content: space-between;
+    }
+  }
+  .about-us {
+    &__inner {
+      padding-bottom: 70px;
+    }
+    &__content {
+      padding: 70px 0 0;
+    }
+    &__box {
+      padding: 70px 45px 50px;
+    }
+    &__box-text {
+      font-size: 20px;
+      line-height: 33px;
+      margin-bottom: 30px;
+    }
+  }
+  .booking {
+    padding-bottom: 70px;
+  }
+  .projects {
+    padding-top: 70px;
+    &__title-box {
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 50px;
+      align-items: flex-start;
+    }
+    &__title-text {
+      max-width: 640px;
+    }
+  }
+  .balenciaga__title,
+  .model-3d__title,
+  .booking__title {
+    margin-bottom: 15px;
+  }
+  .balenciaga__box,
+  .booking__box {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .model-3d {
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__img {
+      width: 450px;
+      left: 0;
+      align-self: flex-end;
+    }
+    &__founder-card {
+      margin: -65px auto 0 0;
+      left: 0;
+    }
+  }
+  .balenciaga__text,
+  .model-3d__text,
+  .booking__text {
+    margin-top: 10px;
+  }
+  .balenciaga__link,
+  .model-3d__link,
+  .booking__link {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .balenciaga__img,
+  .booking__img {
+    right: 0;
+    width: 450px;
+  }
+  .balenciaga__founder-card,
+  .booking__founder-card {
+    right: 0;
+    margin: -65px 0 0 auto;
+  }
+  .services {
+    padding: 70px 0 260px;
+    &__list {
+      gap: 30px;
+    }
+  }
+  .started {
+    max-width: 780px;
+    margin: -135px auto 0 0;
+    &__inner {
+      padding: 50px 0;
+    }
+    &__text {
+      font-size: 45px;
+      line-height: 60px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    &__link {
+      font-weight: 600;
+    }
+  }
+  .footer {
+    &__contacts {
+      padding: 60px 0 50px;
+    }
+    &__menu {
+      gap: 0 50px;
+      padding-right: 50px;
+    }
+    &__social {
+      padding-left: 30px;
+    }
+  }
+
+}
+
+@media(max-width: 900px) {
+  .title {
+    font-size: 30px;
+    line-height: 43px;
+  }
+  .about-us {
+    display: flex;
+    gap: 30px;
+    &__inner {
+      flex-direction: column;
+      padding-bottom: 40px;
+    }
+    &__content {
+      padding: 50px 0 0;
+    }
+    &__box {
+      padding: 50px 30px 40px;
+    }
+    &__partners {
+      margin: -50px 0 0 auto;
+    }
+    &__title {
+      margin: 15px 0 20px;
+    }
+    &__text-after {
+      margin-bottom: 20px;
+    }
+    &__box-text {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+    &__founder-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    &__founder-position {
+      font-size: 14px;
+    }
+  }
+  .partners {
+    &__list {
+      flex-direction: column;
+      padding: 15px;
+      gap: 20px;
+    }
+  }
+  .promo {
+    min-height: 100%;
+    &__content {
+      padding: 180px 0 100px;
+    }
+  }
+  .services {
+    padding: 70px 0 170px;
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__name {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    &__about-box {
+      height: 140px;
+    }
+  }
+  .started {
+    max-width: 570px;
+    margin: -110px auto 0 0;
+    &__inner {
+      padding: 40px 0;
+    }
+    &__text {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  .footer {
+    &__inner {
+      display: block;
+    }
+    &__menu {
+      padding-right: 0;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-right: none;
+      border-bottom: 1px solid #5d6544;
+      justify-content: space-around;
+    }
+    &__social {
+      padding-left: 0;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .promo {
+    margin: -82px auto 0;
+    &__title {
+      margin: 15px 0;
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  .about-us {
+    flex-direction: column-reverse;
+  }
+  .partners {
+    &__list {
+      flex-direction: row;
+    }
+  }
+  .menu__btn {
+    display: block;
+    background-color: transparent;
+    margin: 0 0 0 auto;
+    position: relative;
+    z-index: 2;
+    padding-right: 10px;
+  }
+  .header__menu-item {
+    color: #827d7d;
+  }
+  .header__menu-list {
+    transform: translateY(-500%);
+    background-color: rgb(212 214 212 / 88%);
+    flex-direction: column;
+    gap: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 20px;
+    transition: all 0.5s;
+    padding-top: 65px;
+    .header__menu-item {
+      border-bottom: none;
+    }
+  }
+  .header__menu-list.header__menu-list--active {
+    transform: translateY(0%);
+  }
+  .balenciaga,
+  .model-3d {
+    margin-bottom: 65px;
+  }
+  .started {
+    max-width: 100%;
+  }
+  .footer {
+    &__menu {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media(max-width: 530px) {
+  .title {
+    font-size: 25px;
+  }
+  .about-us {
+    &__box {
+      width: 100%;
+      padding: 50px 15px 40px;
+    }
+    &__box-text {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    &__founder-name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &__partners {
+      display: none;
+    }
+  }
+  .promo {
+    &__title {
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+  .founder-card {
+    max-width: 100%;
+    padding: 30px 15px;
+    &__text {
+      width: 100%;
+    }
+  }
+  .balenciaga__img,
+  .booking__img,
+  .model-3d__img {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .balenciaga__founder-card,
+  .booking__founder-card {
+    margin: -20px 0 0 auto;
+  }
+  .model-3d__founder-card {
+    margin: -20px auto 0 0;
+  }
+  .services {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+    &__about-box {
+      display: block;
+      height: 100%;
+    }
+    &__about {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    br {
+      display: none;
+    }
+  }
+  .started {
+    &__text {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+  }
+  .contacts{
+    &__title{
+      margin-bottom: 10px;
+    }
+  }
+  .footer {
+    &__contacts {
+      padding: 35px 0 40px;
+      flex-direction: column;
+      gap: 30px 0;
+    }
+    &__inner {
+      padding: 40px 0;
+    }
+    &__menu {
+      flex-direction: column;
+      gap: 25px 0;
+    }
+    &__menu-title,
+    &__social-title {
+      margin-bottom: 10px;
+    }
+    &__menu-item,
+    &__social-text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+    &__social-mail {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+    &__bottom{
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+@media(max-width: 430px) {
+  .header {
+    &__menu-list {
+      left: 0;
+      padding-top: 75px;
+    }
+  }
+  .promo {
+    &__title {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    &__content {
+      padding: 145px 0 100px;
+    }
+  }
+}
+
+@media(max-width: 370px) {
+  .header {
+    &__inner {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .menu__btn {
+    padding-left: 11px;
+  }
+  .promo {
+    margin: -112px auto 0;
+
+    &__title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  .about-us {
+    &__founder-img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .balenciaga__img,
+  .booking__img,
+  .model-3d__img {
+    width: 300px;
+  }
+}
